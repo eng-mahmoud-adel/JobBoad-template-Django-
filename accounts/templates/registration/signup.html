@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{% block box %}
+
+  <form class="container my-5" method="post">
+    {% csrf_token %}
+
+    {% bootstrap_form form %}
+
+    <input type="submit" class="boxed-btn3 w-100" value="Sign Up" />
+  </form>
+
+{% endblock %}
